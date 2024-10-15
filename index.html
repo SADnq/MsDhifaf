@@ -11,6 +11,7 @@
             padding: 0;
             background: linear-gradient(to bottom right, #ffafbd, #ffc3a0);
             color: #333;
+            overflow: hidden;
         }
 
         header {
@@ -19,19 +20,22 @@
             text-align: center;
             color: white;
             position: relative;
+            animation: fadeIn 1s ease-in-out;
         }
 
         header img {
-            width: 30%; /* Responsive width for mobile */
-            height: auto;
+            width: 100px;
+            height: 100px;
+            animation: bounce 1s infinite alternate;
         }
 
         .app-name {
-            font-size: 6vw; /* Responsive font size for mobile */
+            font-size: 32px;
             font-weight: bold;
             color: #ffffff;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
             margin-top: 10px;
+            animation: fadeInUp 1s ease-in-out;
         }
 
         nav {
@@ -39,11 +43,11 @@
         }
 
         nav a {
-            margin: 0 10px;
+            margin: 0 15px;
             color: white;
             text-decoration: none;
             font-weight: bold;
-            font-size: 4vw; /* Responsive font size for mobile */
+            transition: color 0.3s;
         }
 
         nav a:hover {
@@ -52,40 +56,68 @@
 
         .hero {
             text-align: center;
-            padding: 30px 10px; /* Reduced padding for mobile */
+            padding: 50px 20px;
+            animation: slideIn 1s ease-in-out;
         }
 
         .hero h1 {
-            font-size: 8vw; /* Responsive font size for mobile */
+            font-size: 36px;
             margin: 0;
+            animation: fadeInUp 1s ease-in-out;
         }
 
         .hero p {
-            font-size: 4vw; /* Responsive font size for mobile */
+            font-size: 18px;
             margin: 20px 0;
         }
 
         .btn {
             background: #ff6f91;
             color: white;
-            padding: 10px 20px; /* Reduced padding for mobile */
+            padding: 15px 30px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 4vw; /* Responsive font size for mobile */
+            font-size: 18px;
             transition: background 0.3s, transform 0.3s;
+            animation: pulse 2s infinite;
         }
 
         .btn:hover {
             background: #ff4a77;
-            transform: scale(1.05);
+            transform: scale(1.1);
         }
 
         footer {
             text-align: center;
-            padding: 15px;
+            padding: 20px;
             background: #ff6f91;
             color: white;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-10px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
     </style>
 </head>
