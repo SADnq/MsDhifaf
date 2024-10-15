@@ -11,119 +11,86 @@
             padding: 0;
             background: linear-gradient(to bottom right, #ffafbd, #ffc3a0);
             color: #333;
-            overflow: hidden;
         }
+
         header {
             background: #ff6f91;
             padding: 20px;
             text-align: center;
             color: white;
             position: relative;
-            animation: fadeIn 1s ease-in-out;
         }
+
         header img {
-            width: 15vw; /* Responsive width */
+            width: 30%; /* Responsive width for mobile */
             height: auto;
-            animation: bounce 1s infinite alternate;
         }
+
         .app-name {
-            font-size: 5vw; /* Responsive font size */
+            font-size: 6vw; /* Responsive font size for mobile */
             font-weight: bold;
             color: #ffffff;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
             margin-top: 10px;
-            animation: fadeInUp 1s ease-in-out;
         }
+
         nav {
             margin: 20px 0;
         }
+
         nav a {
-            margin: 0 15px;
+            margin: 0 10px;
             color: white;
             text-decoration: none;
             font-weight: bold;
-            transition: color 0.3s;
-            font-size: 4vw; /* Responsive font size */
+            font-size: 4vw; /* Responsive font size for mobile */
         }
+
         nav a:hover {
             color: #ffc3a0;
         }
+
         .hero {
             text-align: center;
-            padding: 50px 20px;
-            animation: slideIn 1s ease-in-out;
+            padding: 30px 10px; /* Reduced padding for mobile */
         }
+
         .hero h1 {
-            font-size: 8vw; /* Responsive font size */
+            font-size: 8vw; /* Responsive font size for mobile */
             margin: 0;
-            animation: fadeInUp 1s ease-in-out;
         }
+
         .hero p {
-            font-size: 4vw; /* Responsive font size */
+            font-size: 4vw; /* Responsive font size for mobile */
             margin: 20px 0;
         }
+
         .btn {
             background: #ff6f91;
             color: white;
-            padding: 15px 30px;
+            padding: 10px 20px; /* Reduced padding for mobile */
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 4vw; /* Responsive font size */
+            font-size: 4vw; /* Responsive font size for mobile */
             transition: background 0.3s, transform 0.3s;
-            animation: pulse 2s infinite;
         }
+
         .btn:hover {
             background: #ff4a77;
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
+
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 15px;
             background: #ff6f91;
             color: white;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideIn {
-            from { transform: translateY(-50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        @keyframes fadeInUp {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        @keyframes bounce {
-            from { transform: translateY(0); }
-            to { transform: translateY(-10px); }
-        }
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-        /* Media Queries for better responsiveness */
-        @media (max-width: 768px) {
-            header img {
-                width: 30vw; /* Larger size for smaller screens */
-            }
-            .app-name {
-                font-size: 8vw; /* Adjust font size for smaller screens */
-            }
-            .hero h1 {
-                font-size: 10vw; /* Adjust font size for smaller screens */
-            }
-            .hero p {
-                font-size: 5vw; /* Adjust font size for smaller screens */
-            }
-            .btn {
-                font-size: 5vw; /* Adjust font size for smaller screens */
-            }
         }
     </style>
 </head>
 <body>
+
 <header>
     <img src="https://i.ibb.co/jzG6g3Z/3326017-ico.png" alt="شعار التطبيق">
     <div class="app-name">تطبيق مميز</div>
@@ -133,13 +100,16 @@
         <a href="#">الدعم</a>
     </nav>
 </header>
+
 <div class="hero">
     <h1>حمّل تطبيقنا الآن!</h1>
     <p>استمتع بأفضل تجربة مع تطبيقنا الجديد.</p>
     <a href="https://www.dropbox.com/scl/fi/uis2pw4prh88yzur2w20y/MsDhifaf.apk?rlkey=yhu08yqeqpbs51ufjbj8izfnt&st=zgpgdaxh&dl=1" class="btn">تحميل الآن</a>
 </div>
+
 <footer>
     <p>&copy; 2024 جميع الحقوق محفوظة</p>
 </footer>
+
 </body>
 </html>
